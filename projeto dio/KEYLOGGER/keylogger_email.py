@@ -6,7 +6,7 @@ import os
 
 EMAIL_ORIGEM = "dutrajoao220@gmail.com"
 EMAIL_DESTINO = "dutrajoao220@gmail.com"
-SENHA_EMAIL = "Wo041273"
+SENHA_EMAIL = "POOO041273"
 
 def enviar_email():
     global log
