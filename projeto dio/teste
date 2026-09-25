@@ -1,0 +1,17 @@
+from cryptography.fernet import Fernet
+
+# 1. Gerar uma chave secreta
+chave = Fernet.generate_key()
+print(f"Chave gerada: {chave.decode()}")
+
+# 2. Inicializar o objeto Fernet com a chave
+f = Fernet(chave)
+
+# 3. Criptografar uma mensagem (os dados precisam estar em bytes)
+mensagem = b"Texto confidencial para teste"
+mensagem_encriptada = f.encrypt(mensagem)
+print(f"Texto Criptografado: {mensagem_encriptada.decode()}")
+
+# 4. Descriptografar a mensagem
+mensagem_descriptografada = f.decrypt(mensagem_encriptada)
+print(f"Texto Criptografado Restaurado: {mensagem_descriptografada.decode()}")
